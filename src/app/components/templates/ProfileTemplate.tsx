@@ -7,11 +7,11 @@ import ProfileForm from '../organisms/ProfileForm';
 const ProfileTemplate: React.FC = () => {
   return (
     <Layout>
-      {/* <div className="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+      <div className="max-w-4xl mx-auto bg-white p-6 rounded shadow">
         <ProfileHeader />
         <ProfileInfo />
         <ProfileForm />
-      </div> */}
+      </div>
     </Layout>
   );
 };

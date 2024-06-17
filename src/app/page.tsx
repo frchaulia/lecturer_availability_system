@@ -1,10 +1,10 @@
 import * as React from "react";
 import Image from 'next/image';
-import Container from "./components/atoms/container";
-import Background from "./components/atoms/background";
-import ContentWrapper from "./components/atoms/content_wrapper";
-import Header from "./components/atoms/header";
-import Navbar from "./components/atoms/navbar";
+import Container from "./components/atoms/0.main/1.container";
+import Background from "./components/atoms/0.main/1.background";
+import ContentWrapper from "./components/atoms/0.main/1.content_wrapper";
+import Header from "./components/atoms/0.main/1.header";
+import Navbar from "./components/atoms/0.main/1.navbar";
 
 export default function Home() {
   return (

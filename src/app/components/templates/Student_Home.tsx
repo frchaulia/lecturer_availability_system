@@ -1,10 +1,10 @@
 import React from "react";
-import Background from "../atoms/background";
-import Header from "../atoms/header";
-import Navbar from "../atoms/navbarhome";
-import Container from "../atoms/container";
-import ContentWrapper from "../atoms/content_wrapper";
-import NavbarHome from "../atoms/navbarhome";
+import Background from "../atoms/0.main/1.background";
+import Header from "../atoms/0.main/1.header";
+import Navbar from "../atoms/0.main/2.navbar_home";
+import Container from "../atoms/0.main/1.container";
+import ContentWrapper from "../atoms/0.main/1.content_wrapper";
+import NavbarHome from "../atoms/0.main/2.navbar_home";
 import WelcomeText from "../atoms/welcometext";
 
 export default function Student_Home_Page() {

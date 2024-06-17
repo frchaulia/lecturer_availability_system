@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function HeaderDashboard({children}: {children:any}) {
+export default function Header_Dashboard({children}: {children:any}) {
     return (
       <div className="relative flex gap-5 justify-between w-full md:w-2/3 z-15">
       <div className="flex shrink-0">

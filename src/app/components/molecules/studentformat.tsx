@@ -1,14 +1,14 @@
 import React from "react";
-import Background from "../atoms/background";
-import Header from "../atoms/header";
-import Navbar from "../atoms/studentnavbar";
-import Container from "../atoms/container";
-import ContentWrapper from "../atoms/content_wrapper";
+import Background from "../atoms/0.main/1.background";
+import Header from "../atoms/0.main/1.header";
+import Navbar from "../atoms/0.main/2.student_navbar";
+import Container from "../atoms/0.main/1.container";
+import ContentWrapper from "../atoms/0.main/1.content_wrapper";
 import search_bar from "../atoms/searchbar";
-import HeaderDashboard from "../atoms/headerdashboard";
-import NavbarStudent from "../atoms/studentnavbar";
-import CardGrid from "../atoms/cardholder";
-import Body from "../atoms/body";
+import HeaderDashboard from "../atoms/0.main/2.header_dashboard";
+import NavbarStudent from "../atoms/0.main/2.student_navbar";
+import CardGrid from "../atoms/0.main/1.cardholder";
+import Body from "../atoms/0.main/1.body";
 
 export default function Student_Dashboard() {
   return (
