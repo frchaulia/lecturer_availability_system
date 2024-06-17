@@ -18,13 +18,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0D1627;
+  color: inherit;
 }
+
+/* Example of setting a container background with transparency */
+.container {
+  background-color: rgba(13, 22, 39, 0.9); /* Adjust transparency as needed */
+}
+
 
 @layer utilities {
   .text-balance {
