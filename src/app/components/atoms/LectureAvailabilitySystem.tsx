@@ -1,3 +1,103 @@
+import { useEffect, useState } from 'react';
+import '../styles/statistic_style.css'; // Import your CSS file
+import Image from 'next/image';
+
+interface Record {
+  _id: string;
+  date: string;
+  time: string;
+  NIDN: string;
+  status: string;
+  course: string;
+  name_lecturer?: string; // Make sure these fields match your actual data structure
+  room_lecturer?: string;
+  lecturer_status?: string;
+  timetaken?: string;
+}
+
+interface LecturerAvailabilitySystemProps {
+    availabilityData: Record[];
+}
+
+const LecturerAvailabilitySystem = ({ availabilityData }: LecturerAvailabilitySystemProps) => {
+    useEffect(() => {
+        const fetchAvailability = async () => {
+            try {
+                const response = await fetch('api/fetchAvailability');
+                if (!response.ok) {
+                    throw new Error(`Error fetching availability: ${response.statusText}`);
+                }
+                const data = await response.json();
+                console.log(data); // Verify if data is being fetched correctly
+            } catch (error) {
+                console.error('Error fetching availability:', error);
+            }
+        };
+
+        fetchAvailability();
+    }, []);
+
+    return (
+        <div className="flex flex-col min-h-screen w-full">
+            <div className="header flex gap-5 text-xl text-yellow-400 max-md:flex-wrap">
+                <h1>LECTURER AVAILABILITY SYSTEM</h1>
+                <ul>
+                    <li>HOME</li>
+                    <li>DASHBOARD</li>
+                    <li>ROOM LAYOUT</li>
+                    <li>MY PROFILE</li>
+                    <li>MY STATISTIC</li>
+                </ul>
+            </div>
+            <div className="content">
+                <div className="statistic-box ">
+                    <div className='statistic-box2'>
+                        <h2 className='text-center text-xl '>My Statistic</h2>
+                    </div>
+                    <div className="lecturer-info">
+                        <div className="profile-image">
+                            {/* Replace with actual image */}
+                            <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
+                        </div>
+                        <div className="details">
+                            {/* Assuming availabilityData[0] represents a single document */}
+                            <p>Name     : {availabilityData[0]?.name_lecturer || 'N/A'}</p>
+                            <p>NIDN     : {availabilityData[0]?.NIDN || 'N/A'}</p>
+                            <p>Year In  : {availabilityData[0]?.date || 'N/A'}</p>
+                            <p>Room     : {availabilityData[0]?.room_lecturer || 'N/A'}</p>
+                        </div>
+                    </div>
+                    <div className="statistic-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th className='expand'>Time</th>
+                                    <th className='expand'>NIDN</th>
+                                    <th>Status</th>
+                                    <th className='expand'>Courses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {availabilityData.map((record) => (
+                                    <tr key={record._id}>
+                                        <td>{record.date}</td>
+                                        <td>{record.time}</td>
+                                        <td>{record.NIDN}</td>
+                                        <td>{record.lecturer_status}</td>
+                                        <td>{record.timetaken}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default LecturerAvailabilitySystem;
 // // import React, { useState, useEffect } from 'react';
 // // import axios from 'axios';
 // // import TableLectureRecord from './table/TableLectureRecord'; // Import the TableLectureRecord component
@@ -200,97 +300,97 @@
 
 // export default LecturerAvailabilitySystem;
 
-import { useEffect, useState } from 'react';
-import '../styles/statistic_style.css'; // Import your CSS file
-import Image from 'next/image';
+// import { useEffect, useState } from 'react';
+// import '../styles/statistic_style.css'; // Import your CSS file
+// import Image from 'next/image';
 
-interface Record {
-  _id: string;
-  date: string;
-  time: string;
-  NIDN: string;
-  status: string;
-  course: string;
-}
+// interface Record {
+//   _id: string;
+//   date: string;
+//   time: string;
+//   NIDN: string;
+//   status: string;
+//   course: string;
+// }
 
-interface LecturerAvailabilitySystemProps {
-  availabilityData: Record[];
-}
+// interface LecturerAvailabilitySystemProps {
+//   availabilityData: Record[];
+// }
 
-const LecturerAvailabilitySystem = ({ availabilityData }: LecturerAvailabilitySystemProps) => {
-  useEffect(() => {
-    const fetchLectures = async (data?: any) => {
-        try {
-            const response = await fetch('/api/lectures'); // Ensure this matches your backend route
-            if (!response.ok) {
-                throw new Error(`Error fetching lectures: ${response.statusText}`);
-            }
-            const data = await response.json();
-            fetchLectures(data);
-        } catch (error) {
-            console.error('Error fetching lectures:', error);
-        }
-    };
+// const LecturerAvailabilitySystem = ({ availabilityData }: LecturerAvailabilitySystemProps) => {
+//   useEffect(() => {
+//     const fetchLectures = async (data?: any) => {
+//         try {
+//             const response = await fetch('/api/lectures'); // Ensure this matches your backend route
+//             if (!response.ok) {
+//                 throw new Error(`Error fetching lectures: ${response.statusText}`);
+//             }
+//             const data = await response.json();
+//             fetchLectures(data);
+//         } catch (error) {
+//             console.error('Error fetching lectures:', error);
+//         }
+//     };
 
-    fetchLectures();
-}, []);
-  return (
-    <div className="flex flex-col min-h-screen w-full">
-      <div className="header flex gap-5 text-xl text-yellow-400 max-md:flex-wrap">
-        <h1>LECTURER AVAILABILITY SYSTEM</h1>
-        <ul>
-          <li>HOME</li>
-          <li>DASHBOARD</li>
-          <li>ROOM LAYOUT</li>
-          <li>MY PROFILE</li>
-          <li>MY STATISTIC</li>
-        </ul>
-      </div>
-      <div className="content">
-        <div className="statistic-box ">
-          <div className='statistic-box2'>
-            <h2 className='text-center text-xl '>My Statistic</h2>
-          </div>
-          <div className="lecturer-info">
-            <div className="profile-image">
-              {/* Replace with actual image */}
-              <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
-            </div>
-            <div className="details">
-              <p>Name     : {availabilityData[0]?.course || 'N/A'}</p>
-              <p>NIDN     : {availabilityData[0]?.NIDN || 'N/A'}</p>
-              <p>Year In  : {availabilityData[0]?.date || 'N/A'}</p>
-              <p>Room     : {availabilityData[0]?.status || 'N/A'}</p>
-            </div>
-          </div>
-          <div className="statistic-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th className='expand'>Time</th>
-                  <th className='expand'>NIDN</th>
-                  <th>Status</th>
-                  <th className='expand'>Courses</th>
-                </tr>
-              </thead>
-              <tbody>
-                {availabilityData.map((record) => (
-                  <tr key={record._id}>
-                    <td>{record.date}</td>
-                    <td>{record.time}</td>
-                    <td>{record.NIDN}</td>
-                    <td>{record.status}</td>
-                    <td>{record.course}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+//     fetchLectures();
+// }, []);
+//   return (
+//     <div className="flex flex-col min-h-screen w-full">
+//       <div className="header flex gap-5 text-xl text-yellow-400 max-md:flex-wrap">
+//         <h1>LECTURER AVAILABILITY SYSTEM</h1>
+//         <ul>
+//           <li>HOME</li>
+//           <li>DASHBOARD</li>
+//           <li>ROOM LAYOUT</li>
+//           <li>MY PROFILE</li>
+//           <li>MY STATISTIC</li>
+//         </ul>
+//       </div>
+//       <div className="content">
+//         <div className="statistic-box ">
+//           <div className='statistic-box2'>
+//             <h2 className='text-center text-xl '>My Statistic</h2>
+//           </div>
+//           <div className="lecturer-info">
+//             <div className="profile-image">
+//               {/* Replace with actual image */}
+//               <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
+//             </div>
+//             <div className="details">
+//               <p>Name     : {availabilityData[0]?.course || 'N/A'}</p>
+//               <p>NIDN     : {availabilityData[0]?.NIDN || 'N/A'}</p>
+//               <p>Year In  : {availabilityData[0]?.date || 'N/A'}</p>
+//               <p>Room     : {availabilityData[0]?.status || 'N/A'}</p>
+//             </div>
+//           </div>
+//           <div className="statistic-table">
+//             <table>
+//               <thead>
+//                 <tr>
+//                   <th>Date</th>
+//                   <th className='expand'>Time</th>
+//                   <th className='expand'>NIDN</th>
+//                   <th>Status</th>
+//                   <th className='expand'>Courses</th>
+//                 </tr>
+//               </thead>
+//               <tbody>
+//                 {availabilityData.map((record) => (
+//                   <tr key={record._id}>
+//                     <td>{record.date}</td>
+//                     <td>{record.time}</td>
+//                     <td>{record.NIDN}</td>
+//                     <td>{record.status}</td>
+//                     <td>{record.course}</td>
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </table>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default LecturerAvailabilitySystem;
+// export default LecturerAvailabilitySystem;
