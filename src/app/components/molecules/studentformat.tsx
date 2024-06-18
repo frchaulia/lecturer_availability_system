@@ -4,11 +4,12 @@ import Header from "../atoms/0.main/1.header";
 import Navbar from "../atoms/0.main/2.student_navbar";
 import Container from "../atoms/0.main/1.container";
 import ContentWrapper from "../atoms/0.main/1.content_wrapper";
-import search_bar from "../atoms/searchbar";
+import search_bar from "../atoms/3.fahmi/search_bar";
 import HeaderDashboard from "../atoms/0.main/2.header_dashboard";
 import NavbarStudent from "../atoms/0.main/2.student_navbar";
-import CardGrid from "../atoms/0.main/1.cardholder";
+import CardGrid from "../atoms/0.main/LecturerCard";
 import Body from "../atoms/0.main/1.body";
+import SearchBar from "../atoms/3.fahmi/search_bar";
 
 export default function Student_Dashboard() {
   return (
@@ -21,7 +22,8 @@ export default function Student_Dashboard() {
                   
             </ContentWrapper>
             <Body>
-              <CardGrid />
+              <SearchBar></SearchBar>
+              <CardGrid></CardGrid>
             </Body>
         </Background>
     </Container>
