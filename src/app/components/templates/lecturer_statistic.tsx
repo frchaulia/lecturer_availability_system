@@ -1,20 +1,37 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import Background from "../atoms/0.main/1.background";
 import Header from "../atoms/0.main/1.header";
 import Navbar from "../atoms/0.main/1.navbar";
 import Container from "../atoms/0.main/1.container";
 import ContentWrapper from "../atoms/0.main/1.content_wrapper";
 
-import LecturerAvailabilitySystem from '../atoms/statistic_table_report';
+import LecturerAvailabilitySystem from '../atoms/LectureAvailabilitySystem';
 // import {TableSta} from "../atoms/table_statistic";   try code
 // import CardHolderSta from "../atoms/cardholder_statistic"; yesteday monday
 
 
-export default function lecturer_statistic (){
+const LecturerStatistic = () => {
+    const [availabilityData, setAvailabilityData] = useState([]);
+  
+    useEffect(() => {
+      const fetchAvailabilityData = async () => {
+        try {
+          const response = await fetch('/api/lectures');
+          const data = await response.json();
+          setAvailabilityData(data);
+        } catch (error) {
+          console.error('Error fetching availability data:', error);
+        }
+      };
+  
+      fetchAvailabilityData();
+    }, []);
+  
     return (
 
-        <LecturerAvailabilitySystem availabilityRecords={[]}></LecturerAvailabilitySystem>
+        <LecturerAvailabilitySystem availabilityData={availabilityData} />
 
         // <Container>
         //     <Background>
@@ -39,3 +56,5 @@ export default function lecturer_statistic (){
     
     );
 }
+
+export default LecturerStatistic
