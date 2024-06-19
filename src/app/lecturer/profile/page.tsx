@@ -11,7 +11,7 @@
 "use client";
 
 import { useState } from "react";
-import {  getAvailabilityStatus } from "@/molecules/availability_status";
+import {  getAvailabilityStatus } from "@/app/components/molecules/availability_status";
 
 export default function MyProfile() {
   const [availabilityStatus, setAvailabilityStatus] = useState<
@@ -135,4 +135,4 @@ export default function MyProfile() {
   );
 }
 
-export default MyProfile;
+// export default MyProfile;

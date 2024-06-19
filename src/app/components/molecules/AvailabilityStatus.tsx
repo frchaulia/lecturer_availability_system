@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RadioButton from '../atoms/radio/RadioButton';
+import RadioButton from '../atoms/4.ia/radio/RadioButton';
 
 const AvailabilityStatus: React.FC = () => {
   const [status, setStatus] = useState('Available');

@@ -3,7 +3,7 @@ import Background from "../atoms/0.main/1.background";
 import Header from "../atoms/0.main/1.header";
 import Container from "../atoms/0.main/1.container";
 import ContentWrapper from "../atoms/0.main/1.content_wrapper";
-import Header_Loginpage from "../atoms/title_for_login";
+import Header_Loginpage from "../atoms/0.main/title_for_login";
 import LoginForm from "../molecules/LoginForm";
 import { signIn } from 'next-auth/react';
 import { Login } from "@/app/components/interfaces/schema";

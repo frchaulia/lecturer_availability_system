@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../atoms/text/Text';
+import Text from '../atoms/4.ia/text/Text';
 
 const ProfileInfo: React.FC = () => {
   return (

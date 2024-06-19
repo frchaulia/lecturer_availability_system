@@ -1,5 +1,5 @@
 import AvailabilityStatus from "../molecules/availability_status";
-import Button from "../atoms/button";
+import Button from "../atoms/4.ia/button";
 
 interface ProfileProps {
   name: string;

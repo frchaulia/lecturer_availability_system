@@ -5,7 +5,7 @@ import Background from "../components/atoms/0.main/1.background";
 import ContentWrapper from "../components/atoms/0.main/1.content_wrapper";
 import Login_Header from "../components/atoms/0.main/2.login_header";
 import Login_TextNavbar from "../components/atoms/0.main/2.login_textnavbar";
-import Body from "../components/atoms/0.main/1.body";
+import Body from "@/app/components/atoms/0.main/1.body";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
                 </Login_Header>
             </ContentWrapper>
             <Body>
-              
+                
             </Body>
         </Background>
     </Container>

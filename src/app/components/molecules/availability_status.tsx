@@ -1,5 +1,5 @@
-import Icon from "../atoms/icon";
-import Button from "../atoms/button";
+import Icon from "../atoms/4.ia/icon";
+import Button from "../atoms/4.ia/button";
 
 interface AvailabilityStatusProps {
   status: string;

@@ -1,11 +1,9 @@
 import React from "react";
 import Background from "../atoms/0.main/1.background";
-import Header from "../atoms/0.main/1.header";
 import Container from "../atoms/0.main/1.container";
 import ContentWrapper from "../atoms/0.main/1.content_wrapper";
-import search_bar from "../atoms/3.fahmi/search_bar";
-import HeaderDashboard from "../atoms/0.main/2.header_dashboard";
-import Navbar from "../atoms/0.main/1.navbar";
+import Header_Dashboard from "../atoms/0.main/2.header_dashboard";
+import Navbar from "../atoms/0.main/1.lecturer_navbar_dashboard";
 import CardGrid from "../atoms/0.main/LecturerCard";
 import Body from "../atoms/0.main/1.body";
 import SearchBar from "../atoms/3.fahmi/search_bar";
@@ -16,8 +14,10 @@ export default function Lecturer_Dashboard() {
         <Background>
             <ContentWrapper>
 
-                
+                <Header_Dashboard>
                   <Navbar/>
+                </Header_Dashboard>
+
                   
             </ContentWrapper>
             <Body>

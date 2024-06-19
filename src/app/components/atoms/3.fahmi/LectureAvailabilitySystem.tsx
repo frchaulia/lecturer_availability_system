@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/statistic_style.css'; // Import your CSS file
+import '../5.raihan/styles/statistic_style.css'; // Import your CSS file
 import Image from 'next/image';
 
 interface Record {

@@ -1,5 +1,5 @@
 "use client";
-import Lecturer_dashboard_page from "@/app/components/templates/Lecturer_dashboard_page";
+import Lecturer_Dashboard_Page from "@/app/components/templates/lecturer_dashboard_page ";
 export default function Home(){
-return<Lecturer_dashboard_page></Lecturer_dashboard_page>
+return<Lecturer_Dashboard_Page></Lecturer_Dashboard_Page>
 };
