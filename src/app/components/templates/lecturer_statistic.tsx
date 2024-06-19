@@ -1,41 +1,33 @@
 "use client"
-import React from "react";
-import Background from "../atoms/0.main/1.background";
-import Header from "../atoms/0.main/1.header";
-import Navbar from "../atoms/0.main/1.navbar";
-import Container from "../atoms/0.main/1.container";
-import ContentWrapper from "../atoms/0.main/1.content_wrapper";
+import React, { useState, useEffect } from 'react';
+import LecturerAvailabilitySystem from '@/app/components/atoms/LectureAvailabilitySystem'; // Adjust path as needed
 
-import LecturerAvailabilitySystem from '../atoms/statistic_table_report';
-// import {TableSta} from "../atoms/table_statistic";   try code
-// import CardHolderSta from "../atoms/cardholder_statistic"; yesteday monday
+const LecturerStatistic = () => {
+    const [availabilityData, setAvailabilityData] = useState([]);
 
+    useEffect(() => {
+        const fetchAvailabilityData = async () => {
+            try {
+                const response = await fetch('api/fetchAvailability'); // Updated to fetch from /api/fetchAvailability
+                if (!response.ok) {
+                    throw new Error('Failed to fetch availability data');
+                }
+                const data = await response.json();
+                setAvailabilityData(data);
+            } catch (error) {
+                console.error('Error fetching availability data:', error);
+            }
+        };
 
-export default function lecturer_statistic (){
+        fetchAvailabilityData();
+    }, []); // Empty dependency array ensures useEffect runs only once on component mount
+
     return (
-
-        <LecturerAvailabilitySystem availabilityRecords={[]}></LecturerAvailabilitySystem>
-
-        // <Container>
-        //     <Background>
-        //         <TableSta/>
-        //     </Background>
-            
-        // </Container>
-
-        // <Container>
-        //     <Background>
-        //         <ContentWrapper>
-        //             <Header>
-        //                 <Navbar></Navbar>
-        //             </Header>
-
-        //             <TableSta />
-        //         {/* <CardHolderSta>
-        //             </CardHolderSta> */}
-        //     </ContentWrapper>
-        // </Background>
-        // </Container >
-    
+        <div>
+            <h1>Lecturer Statistic</h1>
+            <LecturerAvailabilitySystem availabilityData={availabilityData} />
+        </div>
     );
-}
+};
+
+export default LecturerStatistic;

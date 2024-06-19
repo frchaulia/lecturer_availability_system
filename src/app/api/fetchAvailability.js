@@ -39,22 +39,44 @@
 
 // pages/api/fetchAvailability.js
 
-import { BigQuery } from '@google-cloud/bigquery';
+// import { BigQuery } from '@google-cloud/bigquery';
 
-const bigquery = new BigQuery({
-  projectId: process.env.BIGQUERY_PROJECT_ID,
-  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Ensure this is set correctly
+// const bigquery = new BigQuery({
+//   projectId: process.env.BIGQUERY_PROJECT_ID,
+//   keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Ensure this is set correctly
+// });
+
+// const dataset = process.env.BIGQUERY_DATASET;
+
+// export default async function handler(req, res) {
+//   try {
+//     const query = `SELECT * FROM \`${dataset}.availability\``;
+//     const [rows] = await bigquery.query(query);
+//     res.status(200).json(rows);
+//   } catch (error) {
+//     console.error('Error fetching data from BigQuery:', error);
+//     res.status(500).json({ error: 'Failed to fetch data' });
+//   }
+// }
+
+import { connectToDatabase } from '../../../db.js'; // Adjust the path to your db.js file
+import nextConnect from 'next-connect';
+
+const handler = nextConnect();
+
+handler.get(async (req, res) => {
+    try {
+        const db = await connectToDatabase(); // Connect to MongoDB
+        const collection = db.collection('availability'); // Specify your collection name
+
+        // Fetch availability data
+        const availabilityData = await collection.find({}).toArray();
+
+        res.status(200).json(availabilityData);
+    } catch (error) {
+        console.error('Error fetching availability data:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 });
 
-const dataset = process.env.BIGQUERY_DATASET;
-
-export default async function handler(req, res) {
-  try {
-    const query = `SELECT * FROM \`${dataset}.availability\``;
-    const [rows] = await bigquery.query(query);
-    res.status(200).json(rows);
-  } catch (error) {
-    console.error('Error fetching data from BigQuery:', error);
-    res.status(500).json({ error: 'Failed to fetch data' });
-  }
-}
+export default handler;

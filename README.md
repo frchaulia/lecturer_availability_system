@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real-Time Lecturer Availability System
 
-## Getting Started
+The Real-Time Lecturer Availability System is a comprehensive solution that utilizes Wi-Fi technology to monitor and report the availability status of lecturers in their room. This system aims to provide accurate and efficient tracking of lecturer availability, enabling students and other stakeholders to access this information easily.
 
-First, run the development server:
+## Group and Class
+- Group: 2
+- Class: TI - 3I
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
+- [Contributing and Team Members](#contributing-and-team-members)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Usage](#usage)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing and Team Members
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Evan Fadhilah Dzulfikar / 2141720167 (Figma, Prototype, Coding)
+- Faricha Aulia / 2141720155 (Figma, Prototype, Documentation, Coding)
+- Muhammad Fahmi Huwaidi / 2141720153 (Sketch, Figma, Coding)
+- Raihan Dany Radhinnur / 2141720166 (Coding, Backend IoT)
+- Vinsensius Ade Winata / 2141720165 (Coding, Backend Cloud, Deployment)
 
-## Learn More
+## Background of the Problem
 
-To learn more about Next.js, take a look at the following resources:
+In educational institutions, it is often challenging for students to determine the availability of lecturers, especially when they need to meet or consult with them. Traditionally, students have to physically visit the lecturer's room or rely on word-of-mouth information, which can be unreliable and time-consuming. This lack of real-time availability information can lead to frustration and inefficient use of time for both students and lecturers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Objectives
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The primary objectives of the Real-Time Lecturer Availability System are:
 
-## Deploy on Vercel
+1. To provide real-time tracking and monitoring of lecturer availability in various rooms using Wi-Fi technology.
+2. To streamline the process of accessing lecturer availability information for students and other stakeholders.
+3. To improve communication and coordination between students and lecturers.
+4. To enhance the overall efficiency and productivity of the educational institution.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+
+- Real-time detection and tracking of lecturer devices (laptops, smartphones, etc.) through active Wi-Fi connections in each room.
+- Processing and transmitting availability data from microcontrollers to a central application server using Cloud Computing technology via the Wi-Fi network.
+- Storage and management of lecturer availability records in a cloud-based database.
+- User-friendly interface (website) for various stakeholders to access and monitor availability information.
+- Search and filter functionality for finding lecturers.
+- Ability to mark favorite lecturers and receive notifications when they are available.
+- Administrator can handle user management, room configuration, and system maintenance.
+- Reporting and analytics capabilities for analyzing lecturer availability trends.
+
+## Technologies
+
+- Design: Figma
+- Front-end: React.js
+- Microcontrollers: Orange Pi
+- Wi-Fi Technology
+- Cloud Computing
+- Back-end : Google Cloud Platform
+- Database : Mango DB
+
+## Usage
+
+1. Access the application through your web browser at the provided URL.
+2. Login using your credentials (student, lecturer, head of departement).
+3. Navigate through the various features and functionalities based on your user role.
+4. Refer to the documentation or in-app help for detailed instructions and usage guidelines.
