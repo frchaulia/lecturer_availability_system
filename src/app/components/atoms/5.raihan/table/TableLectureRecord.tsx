@@ -71,7 +71,7 @@
 // export default TableLectureRecord;
 
 import React from 'react';
-import { Availability, Lecturer } from '@/app/components/interfaces/schema'; // Adjust the path based on your project structure
+import { Availability, Lecturer } from '../../../interfaces/schema'; // Adjust the path based on your project structure
 
 interface Props {
   availabilityRecords: Availability[];

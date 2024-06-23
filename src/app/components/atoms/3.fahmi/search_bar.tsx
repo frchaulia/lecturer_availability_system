@@ -18,6 +18,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ setSearchQuery }) => {
         className="w-full p-2 border rounded"
       />
     </div>
+    
   );
 };
 

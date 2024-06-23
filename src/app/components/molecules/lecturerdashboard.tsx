@@ -21,8 +21,14 @@ export default function Lecturer_Dashboard() {
                   
             </ContentWrapper>
             <Body>
-              <SearchBar></SearchBar>
-              <CardGrid></CardGrid>
+              <div className="w-full">
+              <div className="flex justify-center items-center">
+                <SearchBar></SearchBar>
+              </div>
+              <div>
+                <CardGrid></CardGrid>
+              </div>
+              </div>
             </Body>
         </Background>
     </Container>

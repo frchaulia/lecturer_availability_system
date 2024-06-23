@@ -6,7 +6,7 @@ import ContentWrapper from "../atoms/0.main/1.content_wrapper";
 import Header_Loginpage from "../atoms/0.main/title_for_login";
 import LoginForm from "../molecules/LoginForm";
 import { signIn } from 'next-auth/react';
-import { Login } from "@/app/components/interfaces/schema";
+import { Login } from "../interfaces/schema";
 
 const LoginPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);

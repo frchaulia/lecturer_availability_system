@@ -1,4 +1,4 @@
-import AvailabilityStatus from "../molecules/availability_status";
+import AvailabilityStatus from "./availability_status";
 import Button from "../atoms/4.ia/button";
 
 interface ProfileProps {

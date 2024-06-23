@@ -84,7 +84,7 @@
 'use client'
 import '../styles/globals.css';
 import { SessionProvider } from "next-auth/react";
-import Session from '@/app/api/auth/session';
+import Session from '../../../api/auth/session';
 import { AppProps } from 'next/app';
 import React, { useState, useEffect } from 'react';
 import SearchBar from '@/components/SearchBar';

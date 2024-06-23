@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import LecturerAvailabilitySystem from '@/app/components/atoms/3.fahmi/LectureAvailabilitySystem'; // Adjust path as needed
+import LecturerAvailabilitySystem from '../atoms/3.fahmi/LectureAvailabilitySystem'; // Adjust path as needed
 
 const LecturerStatistic = () => {
     const [availabilityData, setAvailabilityData] = useState([]);

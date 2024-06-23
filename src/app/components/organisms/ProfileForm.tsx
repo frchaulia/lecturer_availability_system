@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileTemplate from '../../components/templates/ProfileTemplate';
+import ProfileTemplate from '../templates/ProfileTemplate';
 
 const MyProfile: React.FC = () => {
   return (

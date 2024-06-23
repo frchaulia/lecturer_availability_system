@@ -1,5 +1,5 @@
 "use client";
-import Student_dashboard_page from "@/app/components/templates/Student_dashboard_page";
+import Student_dashboard_page from "../../components/templates/Student_dashboard_page";
 export default function Home(){
 return<Student_dashboard_page></Student_dashboard_page>
 };

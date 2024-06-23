@@ -1,57 +1,25 @@
 import * as React from "react";
-import Container from "@/app/components/atoms/0.main/1.container";
-import Background from "@/app/components/atoms/0.main/1.background";
-import ContentWrapper from "@/app/components/atoms/0.main/1.content_wrapper";
-import Login_Header from "@/app/components/atoms/0.main/2.login_header";
-import Login_TextNavbar from "@/app/components/atoms/0.main/2.login_textnavbar";
-import Body from "@/app/components/atoms/0.main/1.body";
-import initSpace from "@/app/components/atoms/2.evan/smplrspace";
+import Container from "../../components/atoms/0.main/1.container";
+import Background from "../../components/atoms/0.main/1.background";
+import ContentWrapper from "../../components/atoms/0.main/1.content_wrapper";
+import Login_Header from "../../components/atoms/0.main/2.login_header";
+import Login_TextNavbar from "../../components/atoms/0.main/2.login_textnavbar";
+import Body from "../../components/atoms/0.main/1.body";
+import Map3D from "../../components/atoms/2.evan/map3D";
 
 export default function Home() {
   return (
     <Container>
-        <Background>
+        {/* <Background> */}
             <ContentWrapper>
                 <Login_Header>
                   <Login_TextNavbar/>
                 </Login_Header>
             </ContentWrapper>
             <Body>
-            <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hello world | Smplrspace</title>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-
-    <link rel="stylesheet" href="styles.css" />
-
-    <script src="https://app.smplrspace.com/lib/smplr.js"></script>
-    <link href="https://app.smplrspace.com/lib/smplr.css" rel="stylesheet" />
-  </head>
-
-  <body style="padding: 0 1rem">
-    <h1>Hello world - load from CDN</h1>
-    <p>
-      This example demonstrates a basic integration of Smplrspace, loading
-      smplr.js from our CDN in a static website.
-    </p>
-    <p>
-      <a href="https://docs.smplrspace.com" target="_blank">
-        Learn more in the docs
-      </a>
-    </p>
-    <div class="smplr-wrapper">
-      <div id="test" class="smplr-embed"></div>
-    </div>
-
-    <script type="module" src="script.js"></script>
-  </body>
-</html>
-
+              <Map3D></Map3D>
             </Body>
-        </Background>
+        {/* </Background> */}
     </Container>
   );
 }
