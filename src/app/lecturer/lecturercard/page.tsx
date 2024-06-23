@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import LecturerCard from './components/LecturerCard';
-import './App.css';
+import LecturerCard from '@/app/components/atoms/0.main/LecturerCard';
 
 const App = () => {
   const [lecturers, setLecturers] = useState([]);
@@ -43,7 +42,7 @@ const App = () => {
       </div>
       <div className="card-container">
         {lecturers.map(lecturer => (
-          <LecturerCard key={lecturer.id} lecturer={lecturer} onDelete={deleteLecturer} />
+          <LecturerCard/>
         ))}
       </div>
     </div>
