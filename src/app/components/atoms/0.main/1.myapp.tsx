@@ -87,8 +87,8 @@ import { SessionProvider } from "next-auth/react";
 import Session from '../../../api/auth/session';
 import { AppProps } from 'next/app';
 import React, { useState, useEffect } from 'react';
-import SearchBar from '@/components/SearchBar';
-import LecturerCard from '@/components/LecturerCard';
+import SearchBar from '@/components/3.fahmi/search_bar';
+import LecturerCard from '@/components/0.main/LecturerCard';
 import { fetchLecturers } from '@/services/lecturerService';
 
 function MyApp({ Component, pageProps }: AppProps) {

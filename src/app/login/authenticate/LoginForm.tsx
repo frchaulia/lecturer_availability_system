@@ -26,7 +26,7 @@ const LoginForm: NextPage = () => {
     }
 
     try {
-      const res = await fetch('/api/login', {
+      const res = await fetch('http://localhost:3000/api/fetchAccount', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const LoginForm: NextPage = () => {
       });
 
       if (res.ok) {
-        await router.push('/login/index.tsx'); // Redirect to dashboard after successful login
+        await router.push('/lecturer'); // Redirect to dashboard after successful login
       } else {
         throw new Error('Login failed');
       }
