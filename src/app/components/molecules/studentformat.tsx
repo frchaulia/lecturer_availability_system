@@ -22,8 +22,10 @@ export default function Student_Dashboard() {
                   
             </ContentWrapper>
             <Body>
-              <SearchBar></SearchBar>
-              <CardGrid></CardGrid>
+              <SearchBar setSearchQuery={function (query: string): void {
+            throw new Error("Function not implemented.");
+          } }></SearchBar>
+              <CardGrid lecturer={null}></CardGrid>
             </Body>
         </Background>
     </Container>

@@ -23,10 +23,12 @@ export default function Lecturer_Dashboard() {
             <Body>
               <div className="w-full">
               <div className="flex justify-center items-center">
-                <SearchBar></SearchBar>
+                <SearchBar setSearchQuery={function (query: string): void {
+                throw new Error("Function not implemented.");
+              } }></SearchBar>
               </div>
               <div>
-                <CardGrid></CardGrid>
+                <CardGrid lecturer={null}></CardGrid>
               </div>
               </div>
             </Body>

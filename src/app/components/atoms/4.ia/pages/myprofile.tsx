@@ -1,13 +1,12 @@
 import { useState } from "react";
-import Profile from "@/components/organisms/profile";
-import { getAvailabilityStatus } from "@/molecules/availability_status";
-
+import Profile from "@/app/components/organisms/profile";
+import getAvailabilityStatus from "@/app/components/molecules/availability_status"
 const MyProfile: React.FC = () => {
   const [availabilityStatus, setAvailabilityStatus] = useState<
     "Available" | "Unavailable" | "Available, but outside the lecturer's room*" | "Urgent only, must have an appointment.*"
   >("Available");
 
-  const handleAvailabilityChange = async (status: string) => {
+  const handleAvailabilityChange = async (status: any) => {
     setAvailabilityStatus(status);
     await getAvailabilityStatus(status);
   };
