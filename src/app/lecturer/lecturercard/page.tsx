@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import LecturerCard from './components/LecturerCard';
 import './App.css';
