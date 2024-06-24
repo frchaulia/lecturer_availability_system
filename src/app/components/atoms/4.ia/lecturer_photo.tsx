@@ -1,4 +1,4 @@
-'use client'; // Tambahkan directive ini di awal file
+'use client'; // Add this directive at the top of the file
 
 import React from 'react';
 import Image from 'next/image';
@@ -13,9 +13,21 @@ const LecturerPhoto: React.FC<LecturerPhotoProps> = ({ src }) => {
   };
 
   return (
-    <div>
-      <img src="/assets/aradea1.png" alt="Lecturer Photo" />
-      <button onClick={onChange}>Change Photo</button>
+    <div className="flex flex-col items-center space-y-4">
+      <div className="relative w-24 h-24">
+        <Image 
+          src={src} 
+          alt="Lecturer Photo" 
+          layout="fill" 
+          className="rounded-full object-cover" 
+        />
+      </div>
+      <button 
+        onClick={onChange} 
+        className="px-4 py-2 bg-gray-500 text-white rounded"
+      >
+        Change Photo
+      </button>
     </div>
   );
 };
