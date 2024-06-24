@@ -1,4 +1,4 @@
 
 export default {
-    output: 'standalone',
+
   };
