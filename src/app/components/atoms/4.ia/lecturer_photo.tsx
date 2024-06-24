@@ -14,7 +14,7 @@ const LecturerPhoto: React.FC<LecturerPhotoProps> = ({ src }) => {
 
   return (
     <div>
-      <Image src="/assets/aradea1.png" alt="Lecturer Photo" />
+      <img src="/assets/aradea1.png" alt="Lecturer Photo" />
       <button onClick={onChange}>Change Photo</button>
     </div>
   );
