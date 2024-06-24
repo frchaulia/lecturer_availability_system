@@ -1,13 +1,15 @@
 import * as React from "react";
+import Image from "next/image";
 
 function MyComponent() {
   return (
     <div className="flex flex-col justify-center bg-slate-900">
       <div className="flex overflow-hidden relative flex-col pb-20 w-full mix-blend-color-dodge min-h-[1117px] max-md:max-w-full">
-        <img
+        <Image
           loading="lazy"
-          srcSet="..."
+          src="./img.jpg"
           className="object-cover absolute inset-0 size-full"
+          alt="img1"
         />
         <div className="flex relative gap-5 px-20 py-20 w-full bg-slate-900 max-md:flex-wrap max-md:px-5 max-md:max-w-full">
           <div className="flex-auto text-4xl font-extrabold text-white leading-[74.88px] max-md:max-w-full">
@@ -30,10 +32,11 @@ function MyComponent() {
           </div>
         </div>
         <div className="flex relative flex-col pt-14 pb-4 mt-16 mb-72 ml-20 max-w-full text-xs font-semibold text-black rounded-md shadow-lg w-[267px] max-md:my-10 max-md:ml-2.5">
-          <img
+          <Image
             loading="lazy"
-            srcSet="..."
+            src="./img2.jpg"
             className="self-center max-w-full aspect-[0.96] w-[180px]"
+            alt="img2"
           />
           <div className="justify-center items-start px-5 py-4 mt-7 bg-white max-md:pr-5">
             Name : Anindya Reizana <br />
