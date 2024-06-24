@@ -41,7 +41,7 @@ RUN adduser --system --uid 1001 bloguser
 USER bloguser
 
 # Expose port 3000
-EXPOSE 3000
+EXPOSE 8080
 
 # Command to run the server
 CMD ["node", "server.js"]
