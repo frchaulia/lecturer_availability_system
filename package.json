@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next-intl": "^1.0.0",
     "@google-cloud/bigquery": "^7.7.1",
     "@smplrspace/smplr-loader": "^2.19.0",
     "axios": "^1.7.2",
