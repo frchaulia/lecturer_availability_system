@@ -3,8 +3,8 @@ import Background from "@/app/components/atoms/0.main/1.background";
 import Header from "@/app/components/atoms/0.main/1.header";
 import Container from "@/app/components/atoms/0.main/1.container";
 import ContentWrapper from "@/app/components/atoms/0.main/1.content_wrapper";
-import Header_Loginpage from "@/app/components/atoms/title_for_login";
-import LoginForm from "./LoginForm"; // Adjust import path as necessary
+import Header_Loginpage from "@/app/components/atoms//0.main/title_for_login";
+import LoginForm from "@/app/components/atoms/1.ade/LoginForm"; // Adjust import path as necessary
 import { signIn } from 'next-auth/react';
 import { Login } from "@/app/components/interfaces/schema";
 import { NextPage } from 'next';
