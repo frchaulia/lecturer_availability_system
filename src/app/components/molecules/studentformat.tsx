@@ -38,13 +38,13 @@ export default function Student_Dashboard() {
 {/* <div className="flex flex-col text-xs font-semibold text-black">
       <div className="flex gap-5 px-5 w-full max-md:flex-wrap max-md:max-w-full">
         <div className="flex flex-col flex-1 py-3.5 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/5187f3eb0a99c9a6da49f6b57c482ed52b8fd42978230fd708a85ac0ab506e08?"
             className="self-end aspect-[1.1] fill-orange-600 w-[34px] max-md:mr-2.5"
             alt="Profile"
           />
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center mt-2.5 max-w-full aspect-[0.96] w-[180px]"
@@ -58,7 +58,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -71,7 +71,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -85,7 +85,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -98,7 +98,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -114,7 +114,7 @@ export default function Student_Dashboard() {
       </div>
       <div className="flex gap-5 px-5 mt-12 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -127,7 +127,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -141,7 +141,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -154,7 +154,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"
@@ -168,7 +168,7 @@ export default function Student_Dashboard() {
           </div>
         </div>
         <div className="flex flex-col flex-1 pt-14 pb-4 rounded-md shadow-lg">
-          <img
+          <Image
             loading="lazy"
             srcSet="..."
             className="self-center max-w-full aspect-[0.96] w-[180px]"

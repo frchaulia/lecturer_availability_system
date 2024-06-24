@@ -12,7 +12,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //     return (
 //         <div className="flex flex-col justify-center bg-slate-900">
 //       <div className="flex overflow-hidden relative flex-col items-center w-full mix-blend-color-dodge min-h-[1024px] max-md:max-w-full">
-//         <img
+//         <Image
 //           loading="lazy"
 //           srcSet="..."
 //           className="object-cover absolute inset-0 size-full"
@@ -25,7 +25,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             <div className="self-stretch my-auto font-bold">HOME</div>
 //             <div className="flex-auto self-stretch my-auto">DASHBOARD</div>
 //             <div className="flex-auto self-stretch my-auto">ROOM LAYOUT</div>
-//             <img
+//             <Image
 //               loading="lazy"
 //               src="https://cdn.builder.io/api/v1/image/assets/TEMP/e760ac0834d83fde146ab0f99a8cfb2dcd574a33d353b6f7e77fe09fbc99f10e?"
 //               className="shrink-0 self-stretch aspect-square w-[45px]"
@@ -44,12 +44,12 @@ return<Student_dashboard_page></Student_dashboard_page>
 //           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
 //             <div className="flex flex-col w-[19%] max-md:ml-0 max-md:w-full">
 //               <div className="flex relative flex-col grow py-3 w-full text-xs font-semibold text-black rounded-md shadow-lg max-md:mt-10">
-//                 <img
+//                 <Image
 //                   loading="lazy"
 //                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a6be1e191429191911723b6516080a5f364502dda0aae65bafecb6124d73823?"
 //                   className="self-end w-7 aspect-[1.12] fill-orange-600 max-md:mr-2.5"
 //                 />
-//                 <img
+//                 <Image
 //                   loading="lazy"
 //                   srcSet="..."
 //                   className="self-center mt-2 max-w-full aspect-[0.96] w-[147px]"
@@ -63,7 +63,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //               </div>
 //             </div>
 //             <div className="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full">
-//               <img
+//               <Image
 //                 loading="lazy"
 //                 srcSet="..."
 //                 className="grow w-full rounded-md shadow-lg aspect-[1.61] max-md:mt-10 max-md:max-w-full"
@@ -71,7 +71,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             </div>
 //             <div className="flex flex-col ml-5 w-[19%] max-md:ml-0 max-md:w-full">
 //               <div className="flex relative flex-col grow pt-11 pb-3 w-full text-xs font-semibold text-black rounded-md shadow-lg max-md:mt-10">
-//                 <img
+//                 <Image
 //                   loading="lazy"
 //                   srcSet="..."
 //                   className="self-center max-w-full aspect-[0.97] w-[148px]"
@@ -85,7 +85,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             </div>
 //             <div className="flex flex-col ml-5 w-[19%] max-md:ml-0 max-md:w-full">
 //               <div className="flex relative flex-col grow pt-11 pb-3 w-full text-xs font-semibold text-black rounded-md shadow-lg max-md:mt-10">
-//                 <img
+//                 <Image
 //                   loading="lazy"
 //                   srcSet="..."
 //                   className="self-center max-w-full aspect-[0.96] w-[147px]"
@@ -102,14 +102,14 @@ return<Student_dashboard_page></Student_dashboard_page>
 //         </div>
 //         <div className="flex relative z-10 gap-5 px-5 mt-10 w-full max-w-[1284px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
 //           <div className="flex flex-col flex-1 items-center px-9 pt-11 pb-20 rounded-md shadow-lg max-md:px-5">
-//             <img
+//             <Image
 //               loading="lazy"
 //               srcSet="..."
 //               className="aspect-[0.96] w-[147px]"
 //             />
 //           </div>
 //           <div className="flex flex-col flex-1 pt-11 pb-3 text-xs font-semibold text-black rounded-md shadow-lg">
-//             <img
+//             <Image
 //               loading="lazy"
 //               srcSet="..."
 //               className="self-center max-w-full aspect-[0.96] w-[147px]"
@@ -122,7 +122,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             </div>
 //           </div>
 //           <div className="flex flex-col flex-1 pt-11 pb-3 text-xs font-semibold text-black rounded-md shadow-lg">
-//             <img
+//             <Image
 //               loading="lazy"
 //               srcSet="..."
 //               className="self-center max-w-full aspect-[0.97] w-[148px]"
@@ -134,7 +134,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             </div>
 //           </div>
 //           <div className="flex flex-col flex-1 pt-11 pb-3 text-xs font-semibold text-black rounded-md shadow-lg">
-//             <img
+//             <Image
 //               loading="lazy"
 //               srcSet="..."
 //               className="self-center max-w-full aspect-[0.97] w-[148px]"
@@ -147,7 +147,7 @@ return<Student_dashboard_page></Student_dashboard_page>
 //             </div>
 //           </div>
 //           <div className="flex flex-col flex-1 items-center px-9 pt-11 pb-20 rounded-md shadow-lg max-md:px-5">
-//             <img
+//             <Image
 //               loading="lazy"
 //               srcSet="..."
 //               className="aspect-[0.96] w-[147px]"

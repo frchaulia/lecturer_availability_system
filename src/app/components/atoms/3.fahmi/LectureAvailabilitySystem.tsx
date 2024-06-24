@@ -57,7 +57,7 @@ const LecturerAvailabilitySystem = ({ availabilityData }: LecturerAvailabilitySy
                     <div className="lecturer-info">
                         <div className="profile-image">
                             {/* Replace with actual image */}
-                            <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
+                            <Image src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
                         </div>
                         <div className="details">
                             {/* Assuming availabilityData[0] represents a single document */}
@@ -354,7 +354,7 @@ export default LecturerAvailabilitySystem;
 //           <div className="lecturer-info">
 //             <div className="profile-image">
 //               {/* Replace with actual image */}
-//               <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
+//               <Image src="https://i.imgur.com/MK3eW3Am.jpg" alt="Lecturer Profile" />
 //             </div>
 //             <div className="details">
 //               <p>Name     : {availabilityData[0]?.course || 'N/A'}</p>

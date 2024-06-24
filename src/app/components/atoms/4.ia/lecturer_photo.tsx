@@ -1,6 +1,7 @@
 'use client'; // Tambahkan directive ini di awal file
 
 import React from 'react';
+import Image from 'next/image';
 
 interface LecturerPhotoProps {
   src: string;
@@ -13,7 +14,7 @@ const LecturerPhoto: React.FC<LecturerPhotoProps> = ({ src }) => {
 
   return (
     <div>
-      <img src={`/assets/aradea1.png`} alt="Lecturer Photo" />
+      <Image src="/assets/aradea1.png" alt="Lecturer Photo" />
       <button onClick={onChange}>Change Photo</button>
     </div>
   );
