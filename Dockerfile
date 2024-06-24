@@ -41,7 +41,7 @@
 
 # Production image, copy all the files and configure
 # Stage 1: Install dependencies
-FROM node:23-alpine AS builder
+FROM node:22-alpine3.18 AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
@@ -49,7 +49,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production image
-FROM node:23-alpine AS runner
+FROM node:22-alpine3.18 AS runner
 WORKDIR /app
 ENV NODE_ENV production
 COPY --from=builder /app/public ./public
