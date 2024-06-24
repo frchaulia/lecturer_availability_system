@@ -1,4 +1,4 @@
-import Icon from "../atoms/4.ia/icon";
+// import Icon from "../atoms/4.ia/icon";
 import Button from "../atoms/4.ia/button";
 
 interface AvailabilityStatusProps {
@@ -8,7 +8,7 @@ interface AvailabilityStatusProps {
 
 const AvailabilityStatus: React.FC<AvailabilityStatusProps> = ({ status, onChange }) => (
   <div className="flex items-center gap-2 mt-2">
-    <Icon size={24} />
+    {/* <Icon size={24} /> */}
     <span className="text-lg">{status}</span>
     <div className="flex gap-2 mt-4">
       <Button onClick={() => onChange("Available")}>Available</Button>
