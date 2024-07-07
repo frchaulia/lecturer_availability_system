@@ -49,7 +49,7 @@ The primary objectives of the Real-Time Lecturer Availability System are:
 ## Technologies
 
 - Design: Figma
-- Front-end: React.js
+- Front-end: React.js and Next.js
 - Microcontrollers: Orange Pi
 - Wi-Fi Technology
 - Cloud Computing
